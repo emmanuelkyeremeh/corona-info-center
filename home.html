@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Corona Tracker</title>
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav" style=" background-color: white !important; border-bottom: 1px solid rgba(167, 139, 139, 0.514); height: 4rem; ">
+        <h4 style="margin-top: 1rem;font-family: 'Montserrat', sans-serif; margin-left: 1rem;"><i class="fas fa-viruses" style="color: rgb(61, 110, 150); "></i> Corona<span style="color: rgb(212, 97, 97);">Tracker</span></h4>
+         <a href="./home.html" class=" active width2" style="margin-left: 65% !important; ">Home</a>
+         <a href="./News.html"  >News</a>
+         <a href="./contact.html"  >Contact</a>
+         <a href="./about.html" >About</a>
+         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="Toggle()">&#9776;</a>
+         <div class="dropdown">
+           <button class="dropbtn" >Services
+             <i class="fa fa-caret-down fa-2x"></i>
+           </button>
+           <div class="dropdown-content">
+             <a href="#">Cases Tracker</a>
+             <a href="#">Prevention</a>
+             <a href="#">WHO</a>
+           </div>
+    </div>
+
+    <div class="title">
+		<i class="fas fa-virus" style="color: rgb(247, 73, 73);"></i> Covid <span style="background-color: rgb(102, 139, 173); border-radius: 5rem; color: white;">-19</span> tracker app
+		
+		
+	</div>
+	
+    <div class="bg">
+        <form class="form-group">
+             <input type="text"  id="country" placeholder="Enter Country Name..."/>
+			 <button id="myBtn" >GET DATA <i class="fas fa-external-link-alt"></i></button>	
+			 <div class=" container result">
+				<span id="confirmed"></span> 
+				<br>
+				<span id="recovered"></span>
+				<br>
+				<span id="deaths"></span>
+	  
+			</div>
+		</form>
+	</div>
+</body>
+</html>

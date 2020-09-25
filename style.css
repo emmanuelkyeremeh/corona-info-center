@@ -1,22 +1,33 @@
-body {margin:0;font-family:Arial}
+
+body {margin:0;
+  font-family:Arial;
+  overflow-x: hidden;
+  
+  
+
+}
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+ /* overflow-y: hidden; */
+
+  color: black !important;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 16px; 
+  margin-top: -2rem;
   text-decoration: none;
   font-size: 17px;
+ 
 }
 
 .active {
-  background-color: steelblue;
+  color: rgb(160, 44, 36) !important;
+  transition: color 1s ease-in !important;
+  border-bottom: 0.5rem solid  rgb(160, 44, 36) !important;
   color: white;
 }
 
@@ -25,19 +36,24 @@ body {margin:0;font-family:Arial}
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+  float: right;
+   overflow: hidden;
+   line-height: 2rem;
+   margin-top: 2rem;
+   height: 4rem; 
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 100px;    
   border: none;
+  margin-top: 2rem;
   outline: none;
   color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  
 }
 
 .dropdown-content {
@@ -47,6 +63,8 @@ body {margin:0;font-family:Arial}
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  height: 4rem;
+  line-height: 2rem;
 }
 
 .dropdown-content a {
@@ -58,9 +76,18 @@ body {margin:0;font-family:Arial}
   text-align: left;
 }
 
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+.topnav a:hover {
+  border-bottom: 0.5rem solid #555 !important;
+ 
+}
+
+.topnav a:hover, .dropbtn {
+  color: #555 !important;
+ 
   color: white;
+}
+.dropdown:hover {
+  
 }
 
 .dropdown-content a:hover {
@@ -72,12 +99,12 @@ body {margin:0;font-family:Arial}
   display: block;
 }
 
+
 .bg {
-    background: url('https://images.unsplash.com/photo-1445127040028-b1bdb9acd16e?crop=entropy&fit=crop&fm=jpg&h=950&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1125') center top no-repeat;
+   
     display: block;
     background-size: cover;
-    height:100vh;
-    width: 100%;
+    margin-bottom: 20rem;
     position: relative;
   }
   input {
@@ -86,9 +113,9 @@ body {margin:0;font-family:Arial}
     position: relative;
     display: block;
     outline: none;
-    width: 400px;
-    height: 30p;
-    top: 250px;
+    width: 500px;
+    height: 50px;
+    top: 50px;
     margin: 0 auto;
     padding: 10px;
     color: #333;
@@ -101,14 +128,16 @@ body {margin:0;font-family:Arial}
   :-ms-input-placeholder { color: #666; }
 
 .result{
-    display:inline-flex;
+    text-align: center;
+    font-size: 2rem;
     width:600px;
     color:black;
     position: absolute;
-    top: 60%;
+    top: 30%;
     left:29%;
     font-weight:bold;
     font-family:'Montserrat', sans-serif;
+    
 
 }
 span{
@@ -116,7 +145,7 @@ span{
     text-align:center;
 
 }
-button {
+.button {
     transition: all .5s ease;
     color:steelblue;
     border: 2px solid steelblue;
@@ -125,7 +154,7 @@ button {
     line-height: 1;
     font-weight:bold;
     position: absolute;
-    top: 52%;
+    top: 250%;
     left:46%;
     margin: 0 auto;
     padding: 10px;
@@ -134,30 +163,47 @@ button {
     padding: 10px;
     outline: none;
     border-radius: 1px;
+    cursor: pointer;
 }
 button:hover {
     color: #001F3F;
     background-color: #fff;
 }
+.title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
+  
+  
+}
+.title p{
+  font-size: 1rem;
+}
 
 
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 1160px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
   .topnav a.icon {
     float: right;
     display: block;
+    
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1160px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    margin-top: 0.5rem;
+    
   }
 
   @media screen and (max-width: 400px) {
@@ -178,13 +224,15 @@ button:hover {
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
+   
+    
   }
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: right;
   }
 }
